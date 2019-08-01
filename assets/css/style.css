@@ -1,3 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+
+/* general formatting */
+
+body {
+    background: url(../images/rainforest-from-rawpixel.jpg);
+    font-family: Arial, Helvetica, sans-serif;
+    color: #666666;
+    font-size: 20px;
+    line-height: 35px; 
+
+}
+
+.container {
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto;
+    clear: both;
+    background-color: #ffffff;
+    border: solid 4px #12630E;
+}
+
+/* header */
+.main-header {
+    font-family: 'Love Ya Like A Sister', cursive;
+    text-align: center;
+    color: #12630E;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    padding: 20px;
+}
+
+.main-header h2 {
+    font-size: 40px;
+    line-height: 70px;
+}
+
+.main-header h1 {
+    font-size: 60px;
+    line-height: 80px; 
+    text-decoration: underline dotted #12630E;
+}
+
+/* main content */
+.main-section {
+    padding: 20px;
+}
+
 p {
     display: inline;
     font-size: 20px;

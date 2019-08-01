@@ -58,7 +58,6 @@ document.onkeyup = function (event) {
         // create new element, include userGuess and then append the child? 
         lettersGuessed.textContent = userGuess;
 
-
     }
     //Guess count goes down by one
     guesses--
@@ -71,3 +70,5 @@ document.onkeyup = function (event) {
 // Next round button appears 
 
 // When user clicks the button, new underscores appear, text is cleared from letters guessed
+
+// Ideas for starting new rounds: hiding and displays different html elements 

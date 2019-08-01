@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,34 +10,50 @@
     <!-- CSS Stylesheets -->
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!-- initial text  -->
-    <header><h1>Guess that Animal!</h1></header>
+
+    <header>
+        <div class="main-header container">
+            <h2>Guess that Word:</h2>
+            <h1>Animal Kingdom Edition!</h1>
+        </div>
+    </header>
     <!-- animal theme? when user guesses the animal correctly, a picture and fact about the animal pops up? -->
+    <!-- initial text  -->
+    <div class="main-section container">
+        <div class="game-section">
 
-    <h2 id="directions-text">Press any key to get started!</h2>
+            <h2 id="directions-text">Press any key to get started!</h2>
 
-    <h3>Wins:</h3>
-    <h3 id="wins-text"></h3>
+            <h3>Wins:</h3>
+            <h3 id="wins-text"></h3>
 
-    <h3>Current Word:</h3>
-    <div id="current-word">
-        <p id="letter-1">_ </p>
-        <p id="letter-2">_ </p>
-        <p id="letter-3">_ </p>
-        <p id="letter-4">_ </p>
-        <p id="letter-5">_ </p>
+            <h3>Current Word:</h3>
+            <div id="current-word">
+                <p id="letter-1">_ </p>
+                <p id="letter-2">_ </p>
+                <p id="letter-3">_ </p>
+                <p id="letter-4">_ </p>
+                <p id="letter-5">_ </p>
+            </div>
+
+
+            <h4>Number of Guesses Remaining:</h4>
+            <h4 id="guesses-text">12</h4>
+
+            <h4>Letters Already Guessed:</h4>
+            <div id="letters-guessed"></div>
+        </div>
+        <div class="image-section">
+            <img src="">
+        </div>
     </div>
-    
-
-    <h4>Number of Guesses Remaining:</h4>
-    <h4 id="guesses-text">12</h4>
-
-    <h4>Letters Already Guessed:</h4>
-    <div id="letters-guessed"></div>
 
     <script src="assets/javascript/game.js"></script>
 </body>
+
 </html>
