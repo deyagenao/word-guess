@@ -18,7 +18,7 @@ body {
     max-width: 780px;
     margin: 0 auto;
     clear: both;
-    background-color: #ffffff;
+    background-color: #F3F7F0;
     border: solid 4px #12630E;
 }
 
@@ -46,9 +46,27 @@ body {
 /* main content */
 .main-section {
     padding: 20px;
+    height: 400px;
 }
 
 p {
     display: inline;
     font-size: 20px;
+}
+
+/* game section */
+.game-section {
+    float: left;
+    text-align: center;
+}
+
+/* image section */
+.image-section {
+    float: right;
+}
+.image-section img {
+    width: 375px;
+    height: auto;
+    margin-top: 20px;
+    border: 3px dashed #12630E;
 }
