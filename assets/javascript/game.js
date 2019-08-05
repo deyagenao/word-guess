@@ -27,13 +27,11 @@ var animalWordsToGuess = [
   "blobfish"
 ];
 
-//function for choosing a random word from the array, maybe doesn't even have to be a function..? 
+//function for choosing a random word from the array
 // function chooseRandomAnimalWord() {
-  var chosenWord =
+  var chosenWord = 
     animalWordsToGuess[Math.floor(Math.random() * animalWordsToGuess.length)];
-  // run function to play game:
-  // guessWord();
-// }
+
 console.log(chosenWord);
 //create underscores to hide the current word 
 var hiddenWord = [];
@@ -72,6 +70,9 @@ document.onkeyup = function(event) {
             correctLettersGuessed.push(userGuess);
             //replace underscore from hidden word with the correct letter
             hiddenWord[chosenWord.indexOf(userGuess)] = userGuess;
+            //display the current word to the user
+            currentWord = hiddenWord.toString();
+            currentWordText.textContent = currentWord.replace(/,/g, " ");
         } 
         // if letter is not in the chosen word:  
         else {
