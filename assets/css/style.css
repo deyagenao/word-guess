@@ -8,14 +8,14 @@ body {
     background: url(../images/rainforest-from-rawpixel.jpg);
     font-family: Arial, Helvetica, sans-serif;
     color: #666666;
-    font-size: 20px;
-    line-height: 35px; 
+    font-size: 26px;
+    line-height: 40px; 
 
 }
 
 .container {
     width: 100%;
-    max-width: 780px;
+    max-width: 800px;
     margin: 0 auto;
     clear: both;
     background-color: #F3F7F0;
@@ -46,12 +46,7 @@ body {
 /* main content */
 .main-section {
     padding: 20px;
-    height: 400px;
-}
-
-p {
-    display: inline;
-    font-size: 20px;
+    height: 420px;
 }
 
 /* game section */
@@ -60,12 +55,21 @@ p {
     text-align: center;
 }
 
+h3 {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+h4{
+    font-size: 22px;
+}
+
 /* image section */
 .image-section {
     float: right;
 }
 .image-section img {
-    width: 375px;
+    width: 350px;
     height: auto;
     margin-top: 20px;
     border: 3px dashed #12630E;
