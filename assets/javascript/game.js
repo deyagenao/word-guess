@@ -29,23 +29,29 @@ var animalWordsToGuess = [
 
 //function for choosing a random word from the array
 // function chooseRandomAnimalWord() {
-  var chosenWord = 
-    animalWordsToGuess[Math.floor(Math.random() * animalWordsToGuess.length)];
+  var chosenWord;
+function chooseWord() {
+    chosenWord = animalWordsToGuess[Math.floor(Math.random() * animalWordsToGuess.length)];
+};
+chooseWord();
 
 console.log(chosenWord);
 //create underscores to hide the current word 
 var hiddenWord = [];
-var hideChosenWord = function () {
+
+//create variable to input guesses and display to user 
+var currentWord;
+function hideChosenWord() {
     for (var i = 0; i < chosenWord.length; i++) {
         hiddenWord.push('_');
     }
     return hiddenWord;
-}
+};
+//convert the hidden word array to a string to display on page-- not working because commas appear between the underscores
+currentWord = hiddenWord.toString();
+currentWordText.textContent = currentWord.replace(/,/g, " ");
 console.log(hideChosenWord());
 console.log(hiddenWord);
-//convert the hidden word array to a string to display on page-- not working because commas appear between the underscores
-var currentWord = hiddenWord.toString();
-currentWordText.textContent = currentWord.replace(/,/g, " ");
 
 // console.log(currentWord);
 
@@ -78,6 +84,7 @@ document.onkeyup = function(event) {
         else {
             //letter is added to incorrect guesses
             wrongLettersGuessed.push(" " + userGuess);
+            //incorrect guesses displayed on screen
             wrongLettersGuessedText.textContent = wrongLettersGuessed.toString();
         }
         //Guess count goes down by one
@@ -90,30 +97,27 @@ document.onkeyup = function(event) {
         directionsText.textContent = "You win! You should totally play again.";
         wins++;
         winsText.textContent = wins;
+        restartGame();
     };
     //if number of guesses reaches 0 and there is at least one letter missing in the word, the player loses and the game restarts 
     if (guesses === 0 && hiddenWord.indexOf("_") > -1) {
         directionsText.textContent = "You lose! Maybe you could try again...";
+        restartGame();
     };
-   
+    //function for restarting the entire game 
+    function restartGame () {
+        hiddenWord = [];
+        correctLettersGuessed = [];
+        wrongLettersGuessed = [];
+        wrongLettersGuessedText.textContent = wrongLettersGuessed.toString();
+        chooseWord();
+        hideChosenWord();
+        currentWord = hiddenWord.toString();
+        currentWordText.textContent = currentWord.replace(/,/g, " ");
+        guesses = 12;
+        guessesText.textContent = guesses;
+    };
     console.log(correctLettersGuessed);
     console.log(wrongLettersGuessed);
     console.log(hiddenWord);
-  
-  //  if letter is in the word, underscore in word will be replaced with letter   
-
-//     //letter will be added to text below
-//     // create new element, include userGuess and then append the child?
-//     wrongLettersGuessedText.textContent = userGuess;
-//   }
 };
-// Else: nothing happens
-// When all underscores have been replaced, image/ sound will be revealed. Wins number +1
-//If user does not guess the word in under 12 guesses, game starts over?
-//use property of the variable word to be able to identify when the word is completed, also create a variable to keep track of how many correct letters guessed, and equal them?:
-// if (correctLettersGuessed == word.length)
-// Next round button appears
-
-// When user clicks the button, new underscores appear, text is cleared from letters guessed
-
-// Ideas for starting new rounds: hiding and displays different html elements
