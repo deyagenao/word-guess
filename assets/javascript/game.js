@@ -16,15 +16,20 @@ var currentWordText = document.getElementById("current-word-text");
 var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "v", "u", "w", "x", "y", "z"];
 var animalWordsToGuess = [
   "tiger",
-  "giraffe",
+  "lion",
+  "toucan",
+  "hyena",
+  "bear",
+  "leopard",
+  "camel",
+  "swan",
+  "lizard",
+  "mouse",
   "dolphin",
   "shark",
-  "alligator",
   "wolf",
-  "bonobo",
-  "chimpanzee",
+  "monkey",
   "zebra",
-  "blobfish"
 ];
 
 //function for choosing a random word from the array
